@@ -1,4 +1,5 @@
 filetype on  " Automatically detect file types.
+filetype plugin on
 set nocompatible  " We don't want vi compatibility.
 set background=dark
 " Add recently accessed projects menu (project plugin)
@@ -29,6 +30,7 @@ set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
+set tw=80
 set shiftwidth=2  " Tabs under smart indent
 set nocp incsearch
 set cinoptions=:0,p0,t0
