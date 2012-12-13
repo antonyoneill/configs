@@ -24,3 +24,5 @@ ln -s ~/.configrepo/.bashrc ~/.bashrc
 ln -s ~/.configrepo/.vim ~/.vim
 ln -s ~/.configrepo/.vimrc ~/.vimrc
 ln -s ~/.configrepo/.ssh/config ~/.ssh/config
+ln -s ~/.configrepo/.oh-my-zsh ~/.oh-my-zsh
+ln -s ~/.configrepo/zsh/.zshrv ~/.zshrc

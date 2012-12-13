@@ -1,0 +1,18 @@
+#!/bin/bash
+#Thanks very much to http://www.plouj.com/blog/2008/03/31/howto-run-rtorrent-from-cron-inside-screen/
+PROGRAM="/usr/bin/rtorrent"
+GRACE_DELAY=15
+while true;
+do
+    "$PROGRAM"
+    RETURNED=$?
+    if [ $RETURNED -ne 0 ]
+    then
+  echo "$PROGRAM did not exit cleanly with status code $RETURNED"
+  echo "pausing for $GRACE_DELAY seconds before restarting $PROGRAM"
+  sleep $GRACE_DELAY;
+    else
+  echo "$PROGRAM exited cleanly. It will not be restarted automatically"
+  exit 0
+    fi
+done

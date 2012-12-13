@@ -1,0 +1,12 @@
+#!/bin/sh
+cd $HOME/Drive
+./grive
+LOCALDIR=$HOME/Drive/
+REMOTEDIR=/home/cut/ao231/Drive/
+SERVER=ao231@raptor.kent.ac.uk
+echo Syncing with $SERVER
+echo Sending...
+rsync --rsh=ssh -aizuKL $LOCALDIR $SERVER:$REMOTEDIR
+echo Fetching...
+rsync --rsh=ssh -aizuKL $SERVER:$REMOTEDIR $LOCALDIR
+./grive
