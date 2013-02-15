@@ -1,5 +1,5 @@
 #!/bin/bash
-
+DIR=`pwd`
 cd ~
 
 if [ -f .bashrc ]
@@ -9,6 +9,10 @@ fi
 if [ -d .vim ]
 then
   mv .vim .vim.bak
+fi
+if [ -d .zsh ]
+then
+  mv .zsh .zsh.bak
 fi
 if [ -f .vimrc ]
 then
@@ -20,9 +24,9 @@ then
   chmod 700 .ssh
 fi
 
-ln -s ~/.configrepo/.bashrc ~/.bashrc
-ln -s ~/.configrepo/.vim ~/.vim
-ln -s ~/.configrepo/.vimrc ~/.vimrc
-ln -s ~/.configrepo/.ssh/config ~/.ssh/config
-ln -s ~/.configrepo/.oh-my-zsh ~/.oh-my-zsh
-ln -s ~/.configrepo/zsh/.zshrc ~/.zshrc
+ln -s $DIR/.bashrc ~/.bashrc
+ln -s $DIR/.vim ~/.vim
+ln -s $DIR/.vimrc ~/.vimrc
+ln -s $DIR/.ssh/config ~/.ssh/config
+ln -s $DIR/.oh-my-zsh ~/.oh-my-zsh
+ln -s $DIR/zsh/.zshrc ~/.zshrc
