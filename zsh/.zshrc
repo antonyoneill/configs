@@ -34,6 +34,7 @@ export EDITOR=vim
 # Customize to your needs...
 alias -s html=vim
 alias -s rb=vim
+alias -s pl=vim
 alias -s erb=vim
 alias -g CO634=~/Drive/Uni/CO634
 function chpwd() {
