@@ -30,3 +30,4 @@ ln -s $DIR/.vimrc ~/.vimrc
 ln -s $DIR/.ssh/config ~/.ssh/config
 ln -s $DIR/.oh-my-zsh ~/.oh-my-zsh
 ln -s $DIR/zsh/.zshrc ~/.zshrc
+chmod 700 $DIR/.ssh/config
