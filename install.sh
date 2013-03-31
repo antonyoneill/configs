@@ -18,6 +18,10 @@ if [ -f .vimrc ]
 then
   mv .vimrc .vimrc.bak
 fi
+if [ -d .ssh ]
+then
+  mv .ssh .ssh.bak
+fi
 if [ ! -d .ssh ]
 then
   mkdir .ssh
